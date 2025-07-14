@@ -2,8 +2,8 @@ function adicionar() {
     let nome = document.getElementById('nome-amigo').value;
     let incluidos = document.getElementById('lista-amigos');
     if(incluidos.textContent == '') {
-        incluidos.textContent = amigo;
+        incluidos.textContent = nome;
     } else {
-        incluidos.textContent = textContent + ', ' + nome;
+        incluidos.textContent = incluidos.textContent + ', ' + nome;
     }
 }
