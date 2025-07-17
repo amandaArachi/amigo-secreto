@@ -3,15 +3,17 @@ let listaNomes = [];
 
 function adicionar() {
     let nome = document.getElementById('nome-amigo');
+
+    if(nome.value === '') {
+        alert('O nome não pode estar vazio!');
+        return;
+    } 
+
     let incluidos = document.getElementById('lista-amigos');
     listaNomes.push(nome.value);
 
     if(incluidos.textContent == '') {
         incluidos.textContent = nome.value;
-    } else if(nome.value === '') {
-        incluidos.textContent = incluidos.textContent;
-        alert('O nome não pode estar vazio!');
-        listaNomes.pop();
     } else {
         incluidos.textContent = incluidos.textContent + ', ' + nome.value;
     }
