@@ -8,6 +8,10 @@ function adicionar() {
 
     if(incluidos.textContent == '') {
         incluidos.textContent = nome.value;
+    } else if(nome.value === '') {
+        incluidos.textContent = incluidos.textContent;
+        alert('O nome não pode estar vazio!');
+        listaNomes.pop();
     } else {
         incluidos.textContent = incluidos.textContent + ', ' + nome.value;
     }
