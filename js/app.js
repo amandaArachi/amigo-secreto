@@ -35,3 +35,9 @@ function embaralhar(lista) {
         [lista[indice - 1], lista[indiceAleatorio]] = [lista[indiceAleatorio], lista[indice - 1]];
     }
 }
+
+function reiniciar() {
+    listaNomes = [];
+    document.getElementById('lista-amigos').innerHTML = '';
+    document.getElementById('lista-sorteio').innerHTML = '';
+}
