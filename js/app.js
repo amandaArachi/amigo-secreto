@@ -1,4 +1,3 @@
-//validações: qtd min de participante, campo vazio(ok), valor repetido.
 let listaNomes = [];
 
 function adicionar() {
@@ -8,6 +7,11 @@ function adicionar() {
         alert('O nome não pode estar vazio!');
         return;
     } 
+
+    if(listaNomes.includes(nome.value)) {
+        alert('Nome já existente.');
+        return;
+    }
 
     let incluidos = document.getElementById('lista-amigos');
     listaNomes.push(nome.value);
@@ -21,6 +25,12 @@ function adicionar() {
 }
 
 function sortear() {
+
+    if(listaNomes.length < 4) {
+        alert('Deve haver no mínimo 4 participantes.');
+        return;
+    }
+
     embaralhar(listaNomes);
     let sorteio = document.getElementById('lista-sorteio');
      
